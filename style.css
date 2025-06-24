@@ -5,7 +5,7 @@ body {
   background-color: #f8f8f8;
 }
 
-/* رأس الصفحة */
+
 header {
   background-color: #2ecc71;
   padding: 15px 30px;
@@ -31,7 +31,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* محتوى الصفحة */
+
 main {
   padding: 40px;
   text-align: center;
@@ -48,11 +48,11 @@ main h1 {
   margin-bottom: 40px;
 }
 
-/* البضائع */
+
 .products {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; /* تقليل المسافة بين المنتجات */
+  gap: 15px; 
   justify-content: center;
   padding: 10px;
 }
@@ -60,7 +60,7 @@ main h1 {
 .product-card {
   background-color: white;
   padding: 15px;
-  width: 250px; /* حجم موحد لكل منتج */
+  width: 250px; 
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -112,7 +112,7 @@ main h1 {
       color: #27ae60;
       font-weight: bold;
     }
-/* التذييل */
+
 footer {
   text-align: center;
   padding: 20px;
