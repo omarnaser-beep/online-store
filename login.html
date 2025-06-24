@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول وإنشاء حساب</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="button-box">
+      <button onclick="showLogin()">تسجيل الدخول</button>
+      <button onclick="showRegister()">إنشاء حساب</button>
+    </div>
+
+    <!-- نموذج تسجيل الدخول -->
+    <form id="loginForm" class="form-box">
+      <h2>تسجيل الدخول</h2>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="button" onclick="redirectToHome()">دخول</button>
+    </form>
+
+    <!-- نموذج إنشاء الحساب -->
+    <form id="registerForm" class="form-box hidden">
+      <h2>إنشاء حساب</h2>
+      <input type="text" placeholder="اسم المستخدم" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="button" onclick="redirectToHome()">تسجيل</button>
+    </form>
+  </div>
+
+  <script>
+    function showLogin() {
+      document.getElementById("loginForm").classList.remove("hidden");
+      document.getElementById("registerForm").classList.add("hidden");
+    }
+
+    function showRegister() {
+      document.getElementById("loginForm").classList.add("hidden");
+      document.getElementById("registerForm").classList.remove("hidden");
+    }
+
+    function redirectToHome() {
+      window.location.href = "home.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الصفحة الرئيسية للمتجر</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">متجري</div>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">منتجات</a>
+      <a href="#">السلة</a>
+      <a href="#">المفضلة</a>
+      <a href="#">تسجيل الخروج</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>أهلاً بك في المتجر الإلكتروني</h1>
+    <p class="subtitle">استمتع بأفضل العروض والتخفيضات اليوم!</p>
+
+    <!-- قسم الإعلانات الثابتة -->
+    <div class="ads">
+      <div class="ad-banner">
+        <img src="https://mostaql.hsoubcdn.com/uploads/portfolios/1779383/6391d887ee72c/IMG-20221206-WA0093.jpg" alt="إعلان 1">
+      </div>
+
+      <div class="ad-row">
+        <img src="https://nafezly-production.fra1.cdn.digitaloceanspaces.com/uploads/portfolios/26352_64ba9c1009b82_1689951248.webp" alt="إعلان جانبي 1">
+        <img src="https://egyplans.com/wp-content/uploads/2024/02/%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D8%B9%D9%86-%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9-3.jpg" alt="إعلان جانبي 2">
+      </div>
+    </div>
+
+    <div class="products">
+      <!-- هاتف سامسونج -->
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmL-qxyldtbITZ2XaUxLQIi2RcBqRBUYuLCw&s" alt="هاتف سامسونج">
+        <h3>هاتف سامسونج</h3>
+        <p>سعر: 5000 جنيه</p>
+        <button class="add-to-cart" data-price="5000">أضف إلى السلة</button>
+      </div>
+
+      <!-- لابتوب HP -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61TVUY743GL.jpg" alt="لابتوب HP">
+        <h3>لابتوب HP</h3>
+        <p>سعر: 12000 جنيه</p>
+        <button class="add-to-cart" data-price="12000">أضف إلى السلة</button>
+      </div>
+
+      <!-- سماعة بلوتوث -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/31EUMeQDumL._AC_.jpg" alt="سماعة بلوتوث">
+        <h3>سماعة بلوتوث</h3>
+        <p>سعر: 450 جنيه</p>
+        <button class="add-to-cart" data-price="450">أضف إلى السلة</button>
+      </div>
+    </div>
+
+    <!-- عرض إجمالي السلة -->
+    <div id="cart-total">إجمالي السلة: 0 جنيه</div>
+  </main>
+
+  <footer>
+    &copy; 2025 - متجري الإلكتروني
+  </footer>
+
+  <!-- كود JavaScript لحساب الإجمالي -->
+  <script>
+    let total = 0;
+    const totalDisplay = document.getElementById("cart-total");
+    const buttons = document.querySelectorAll(".add-to-cart");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const price = parseFloat(button.getAttribute("data-price"));
+        total += price;
+        totalDisplay.textContent = `إجمالي السلة: ${total} جنيه`;
+      });
+    });
+  </script>
+</body>
+</html>
